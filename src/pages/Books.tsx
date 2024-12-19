@@ -24,7 +24,7 @@ const Books = () => {
       id: 1,
       title: "The Hunger Games",
       series: "The Hunger Games Trilogy",
-      cover: "https://images.unsplash.com/photo-1505063366573-38928ae5567e",
+      cover: "https://imgur.com/a/1OjmN0I",
       description: "In the ruins of a place once known as North America lies the nation of Panem, a shining Capitol surrounded by twelve outlying districts.",
       content: "The Hunger Games is a compelling story about survival, sacrifice, and the power of one person to inspire change. The novel follows Katniss Everdeen, a 16-year-old girl living in a post-apocalyptic world where children are forced to participate in an annual televised death match."
     },
