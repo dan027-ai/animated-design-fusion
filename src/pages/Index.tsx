@@ -1,14 +1,23 @@
 import { Navigation } from "../components/Navigation";
 import { HeroSection } from "../components/HeroSection";
-import { NewsSection } from "../components/NewsSection";
+import { BookSection } from "../components/BookSection";
+import { AboutSection } from "../components/AboutSection";
+import { Footer } from "../components/Footer";
+import { ThemeProvider } from "../components/ThemeProvider";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Navigation />
-      <HeroSection />
-      <NewsSection />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-background text-foreground">
+        <Navigation />
+        <main>
+          <HeroSection />
+          <BookSection />
+          <AboutSection />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 };
 

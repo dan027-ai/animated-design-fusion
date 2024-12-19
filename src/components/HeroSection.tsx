@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Button } from "./ui/button";
 
 export const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,17 +9,25 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gradient-to-r from-purple-600 to-blue-500">
-      <div className={`container mx-auto px-6 text-center transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 animate-fade-up">
-          Welcome to Modern News
+    <div className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-r from-primary/10 to-secondary/10">
+      <div className={`container mx-auto px-6 text-center transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}>
+        <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 animate-fade-up">
+          Welcome to the World of
+          <span className="block text-primary">Suzanne Collins</span>
         </h1>
-        <p className="text-xl md:text-2xl text-white/90 mb-12 animate-fade-up" style={{ animationDelay: '200ms' }}>
-          Your source for the latest updates, reimagined for the modern web
+        <p className="text-xl md:text-2xl text-muted-foreground mb-12 animate-fade-up max-w-2xl mx-auto" 
+           style={{ animationDelay: '200ms' }}>
+          Discover the captivating universes and unforgettable characters brought to life through the power of storytelling
         </p>
-        <button className="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg animate-fade-up" style={{ animationDelay: '400ms' }}>
-          Get Started
-        </button>
+        <Button 
+          size="lg"
+          className="animate-fade-up hover:scale-105 transition-transform duration-300"
+          style={{ animationDelay: '400ms' }}
+        >
+          Explore Books
+        </Button>
       </div>
     </div>
   );
