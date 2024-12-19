@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button } from "./ui/button";
+import { useNavigate } from "react-router-dom";
 
 interface Book {
   title: string;
@@ -10,6 +11,7 @@ interface Book {
 
 export const BookSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
 
   const books: Book[] = [
     {
@@ -85,6 +87,7 @@ export const BookSection = () => {
                 <Button 
                   variant="outline"
                   className="w-full hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                  onClick={() => navigate('/books')}
                 >
                   Learn More
                 </Button>
